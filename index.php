@@ -18,8 +18,8 @@
     <header class="d-flex justify-content-around p-1 align-items-center">
 
         <div>
-            <img class="logo" src="img/logo.png" alt="logoPagina">     
-        </div>
+            <img class="logo" src="img/logoL&L.png" alt="logoPagina">     
+        </div>  
 
         <div>
             <h1>
@@ -39,12 +39,12 @@
             <div class="row g-3 justify-content-around  p-3">
 
                 <div class="col-3">
-                  <input id="inputNombreFiltro" type="text" class="form-control" placeholder="NOMBRE" aria-label="Nombre">
+                  <input id="inputNombreFiltro" type="text" class="form-control backgroundElementos" placeholder="NOMBRE" aria-label="Nombre">
                 </div>
 
                 <div class="col-2">
                     <label class="visually-hidden" for="autoSizingSelect">Genero</label>
-                    <select id="inputGeneroFiltro" class="form-select">
+                    <select id="inputGeneroFiltro" class="backgroundElementos form-select">
                       <option value="" selected>GENERO</option>
                       <option value="1">Acción</option>
                       <option value="2">Terror</option>
@@ -54,7 +54,7 @@
 
                 <div class="col-2">
                     <label class="visually-hidden" for="autoSizingSelect">Plataforma</label>
-                    <select id="inputPlataformaFiltro" class="form-select">
+                    <select id="inputPlataformaFiltro" class="backgroundElementos form-select">
                       <option value="" selected>PLATAFORMA</option>
                       <option value="1">PS5</option>
                       <option value="2">Xbox One</option>
@@ -64,7 +64,7 @@
 
                 <div class="col-2">
                     <label class="visually-hidden" for="autoSizingSelect">Ordenar</label>
-                    <select id="inputOrdenarFiltro" class="form-select">
+                    <select id="inputOrdenarFiltro" class="backgroundElementos form-select">
                       <option value="" selected>ORDENAR</option>
                       <option value="1">Alfabeticamente</option>
                       <option value="2">Año de lanzamiento</option>
@@ -79,7 +79,7 @@
         <table class="col-12" width="500px">
             <tr>
                 <td>
-                    <div class="card mb-3 m-2" style="max-width: 540px;">
+                    <div class="backgroundElementos card mb-3 m-2" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="img/juego1.jpg" class="img-fluid rounded-start" alt="...">
@@ -97,7 +97,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="card mb-3 m-2" style="max-width: 540px;">
+                    <div class="backgroundElementos card mb-3 m-2" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="img/juego2.jpg" class="img-fluid rounded-start" alt="...">
@@ -115,7 +115,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="card mb-3 m-2" style="max-width: 540px;">
+                    <div class="backgroundElementos card mb-3 m-2" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="img/juego3.jpg" class="img-fluid rounded-start" alt="...">
@@ -138,7 +138,7 @@
 
             <tr>
                 <td>
-                    <div class="card mb-3 m-2" style="max-width: 540px;">
+                    <div class="backgroundElementos card mb-3 m-2" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="img/juego4.jpg" class="img-fluid rounded-start" alt="...">
@@ -156,7 +156,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="card mb-3 m-2" style="max-width: 540px;">
+                    <div class="backgroundElementos card mb-3 m-2" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="img/juego5.jpg" class="img-fluid rounded-start" alt="...">
@@ -174,7 +174,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="card mb-3 m-2" style="max-width: 540px;">
+                    <div class="backgroundElementos card mb-3 m-2" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="img/juego6.jpg" class="img-fluid rounded-start" alt="...">

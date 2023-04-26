@@ -1,11 +1,11 @@
 header {
-    background-color: #ebf3a0;
+    background-color: #55B7F9;
 }
 
 main {
 
     text-align: center;
-    background-color: #f5fac1;
+    background-color: #0F4C75;
     /*padding-bottom: 3em;*/
 }
 body {
@@ -18,15 +18,25 @@ body {
 }
 
 footer {
-    background-color: #a2f6b5;
+    background-color: #1B262C;
     text-align: center;
+    color: #ffffff;
     /*position: absolute;
     bottom: 0;
     width: 100%;*/
 }
 
+#contenedorForm{
+    color: #e3e3e3;
+    padding: 20px;
+}
+
+.backgroundElementos {
+    background-color: #d8f8ff;
+}
+
 .boton {
-    background-color: #a2f6b5;
+    background-color: #d8f8ff;
     border-radius: 10px;
         color: #000000;
         padding: 15px 32px;
@@ -51,8 +61,7 @@ fieldset{
 }
 
 .logo{
-    max-width: 100px;
-    max-height: 200px;    
+    width: 150px;   
 }
 
 #mensajeError{

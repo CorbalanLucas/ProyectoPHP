@@ -1,16 +1,17 @@
 <?php
 
 //armar la conexion
-$link = mysqli_connect('localhost','root','','juegos');   //conexion con ese usuario contraseña y nombre de base
-$result = mysqli_query($link, 'SELECT * FROM generos');  //recibe conexion y consulta SQL - $result es un objeto con los datos de la consulta - Devuelve FALSE cuando algo se rompio
-
-if ($result){
-    echo "Numero de filas recuperadas: " . mysqli_num_rows($result);
-}else{
-    die('Query Invalido: '. mysqli_error($link));
+$conn = new mysqli("localhost", "root", "", "juegos");   //conexion con ese usuario contraseña y nombre de base
+if($conn->connect_errno){
+    echo "Fallo al conectar a MySQL: " . $conn->connect_error;
 }
+//$result = mysqli_query($link, 'SELECT * FROM generos');  //recibe conexion y consulta SQL - $result es un objeto con los datos de la consulta - Devuelve FALSE cuando algo se rompio
 
-
+//if ($result){
+  //  echo "Numero de filas recuperadas: " . mysqli_num_rows($result);
+//}else{
+ //   die('Query Invalido: '. mysqli_error($link));
+//}
 
 //recorrer fila
 //while ($row = mysqli_fetch_array($result)){ //toma elemento y avanza el puntero, pero en la variable se guarda para operar con el dato
