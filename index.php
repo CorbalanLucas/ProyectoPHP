@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -194,6 +197,26 @@
             </tr>
 
         </table>
+        <?php if(!empty($_SESSION['nombre'])): ?>
+            <script>
+                document.body.classList.add("modalAbierto");
+            </script>
+            <div id="miModal" class="modalPersonalizado">
+                <div class="contenidoModal">
+                    <div class="modalHeader">
+                        <span id="cerrar">&times;</span>
+                        <h2>Juego agregado</h2>
+                    </div>
+                    <div class="modalBody">
+                        <p>Se ha agregado <?php echo $_SESSION['nombre'] ?> a la lista de juegos </p>
+                    </div>
+                    <?php session_destroy() ?>
+                    <div class="modalFooter">
+                        <button id="botonCerrar" class="boton">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
         <footer >
             <p>Lucas Corbalan - Lucas Di Pardo</p>
             <p style="margin-bottom:0px; padding-bottom: 16px;">2023</p>
@@ -207,10 +230,13 @@
 
 
     <!--Js Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
-    <script src="js/validacion.js"></script>
+    <script src="js/validacionIndex.js"></script>
 </body>
 
 </html>
