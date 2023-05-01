@@ -35,12 +35,12 @@
     </header>
     <main>
         <div id="contenedorForm">
-            <form class="formularioCarga" method="post" action="../cargarTabla.php">
+            <form id="formularioCarga" action="../cargarTabla.php" method="POST">
                 <div >
                     <h3>CARGAR JUEGO </h3>
                         <div class="m-2">
                             <!--Obligatorio-->                 
-                            <input id="inputNombre" name="inputNombre" type="text" placeholder="NOMBRE"> <!-- no se porque esta el id y name-->
+                            <input id="inputNombre" name="inputNombre" type="text" placeholder="NOMBRE">
                             <p id="obligatorioNombre" class="obligatorio">*</p>
                         </div>                    
                         <div class="m-2">
@@ -51,13 +51,13 @@
                         <div class="m-2">
                             <!--Max 255 caracteres-->
                             <input id="inputDescripcion" name="inputDescripcion" placeholder="DESCRIPCION" type="textarea" rows="4" cols="50" >
-                            <p id="obligatorioDescripcion" class="obligatorio fs-6">Max 80 caracteres</p>
+                            <p id="obligatorioDescripcion" class="obligatorio fs-6">Max 255 caracteres</p>
                         </div>
                         <div class="m-2">
                             <!--Opcion-->
                             <p class="parrafoFormulario d-inline">PLATAFORMA</p>
                                 <select name="inputPlataforma" id="inputPlataforma">
-                                    <option value=0>
+                                    <option value="">
                                         -
                                     </option>
                                     <option value=1>
@@ -79,7 +79,7 @@
                         <div class="m-2">
                             <p class="parrafoFormulario d-inline">GENERO</p>
                                 <select  id="inputGenero" name="inputGenero">
-                                    <option value=0>
+                                    <option value="">
                                         -
                                     </option>
                                     <option value=1>
@@ -109,7 +109,7 @@
                             <p id="mensajeError">TODOS LOS CAMPOS SON OBLIGATORIOS</p>
                         </div>
                         <div>
-                            <input class="boton" type="submit" value="ENVIAR">
+                            <a class="boton" id="enviarForm" href="js/validacion.js"> Enviar </a>
                             <input class="boton" type="reset" onclick="resetCampos()" value="BORRAR">
                         </div>
                 </div>
