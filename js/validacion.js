@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('enviarForm').addEventListener('click', function(e) {
+        e.preventDefault();
+        if(validar()){
+            document.getElementById('formularioCarga').submit();
+        }
+    })
+  })
 function validar(){
     let valido = true;
 
@@ -16,7 +24,7 @@ function validar(){
         }
         
         //valido max 250 caracteres, puede estar vacio
-        if (descripcion.length>250){            
+        if ((descripcion.length>250)||(descripcion=='')){            
             document.getElementById('obligatorioDescripcion').style.display='inline';
             valido=false;              
         }else{            
@@ -44,13 +52,14 @@ function validar(){
             document.getElementById('obligatorioGenero').style.display='none';
         }
         
-        //valido max 80 caracteres, puede estar vacio
-        if (url.length>80){
+        if ((url.length>80)||(url=='')){
             document.getElementById('obligatorioURL').style.display='inline';
             valido=false;
         }else{
             document.getElementById('obligatorioURL').style.display='none';  
         }
+
+        return valido;
         
         event.preventDefault();
 }
@@ -76,24 +85,4 @@ function resetCampos(){
     //location.reload( forceGet );    
 
 
-}
-
-function validarFiltro(){
-    let nombre=document.getElementById("inputNombreFiltro");
-    let plataforma=document.getElementById("inputPlataformaFiltro");
-    let genero=document.getElementById("inputGeneroFiltro");
-    let ordenar=document.getElementById("inputOrdenarFiltro");
-
-    if((nombre.value=="")&&(plataforma.value=="")&&(genero.value=="")&&(ordenar.value=="")){
-        nombre.style.borderColor="red";
-        plataforma.style.borderColor="red";
-        genero.style.borderColor="red";
-        ordenar.style.borderColor="red";
-    }
-    else{
-        nombre.style.borderColor="#dee2e6";
-        plataforma.style.borderColor="#dee2e6";
-        genero.style.borderColor="#dee2e6";
-        ordenar.style.borderColor="#dee2e6";
-    }
 }
