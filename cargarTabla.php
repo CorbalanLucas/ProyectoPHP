@@ -1,6 +1,6 @@
 <?php
     $valido = true;
-    if((empty($_POST['inputNombre'])) || (empty($_POST['inputDescripcion'])) || (empty($_POST['inputImagen'])) || (empty($_POST['inputPlataforma'])) || (empty($_POST['inputUrl'])) || (empty($_POST['inputGenero']))){
+    if((empty($_POST['inputNombre'])) || (empty($_POST['inputDescripcion'])) || (empty($_FILES['inputImagen'])) || (empty($_POST['inputPlataforma'])) || (empty($_POST['inputUrl'])) || (empty($_POST['inputGenero']))){
         $valido = false;
         var_dump($_POST['inputNombre']);
         var_dump($_POST['inputDescripcion']);
@@ -21,7 +21,8 @@
             }
             else {
                 $nombre = $_POST['inputNombre'];
-                $imagen = $_POST['inputImagen'];
+                $imagen = base64_encode(file_get_contents($_FILES['inputImagen']['tmp_name']));
+                $type = $_FILES['inputImagen']['type'];
                 $plataforma = $_POST['inputPlataforma'];
                 $genero = $_POST['inputGenero'];
             }
@@ -30,7 +31,7 @@
 
     if($valido==true){
         include 'conexionBD.php';
-        $sql = "INSERT INTO juegos (nombre, descripcion, id_genero, id_plataforma) VALUES ('$nombre', '$descripcion', '$genero', '$plataforma');";
+        $sql = "INSERT INTO juegos (nombre, imagen, tipo_imagen, descripcion, id_genero, id_plataforma) VALUES ('$nombre', '$imagen', '$type', '$descripcion', '$genero', '$plataforma');";
         if ($conn->query($sql) === TRUE) {
             session_start();
             $_SESSION['nombre'] = $nombre;
