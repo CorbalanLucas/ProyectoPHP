@@ -35,7 +35,7 @@
     </header>
     <main>
         <div id="contenedorForm">
-            <form id="formularioCarga" action="../cargarTabla.php" method="POST">
+            <form id="formularioCarga" action="../cargarTabla.php" method="POST" enctype="multipart/form-data">
                 <div >
                     <h3>CARGAR JUEGO </h3>
                         <div class="m-2">
@@ -50,7 +50,7 @@
                         </div>
                         <div class="m-2">
                             <!--Max 255 caracteres-->
-                            <input id="inputDescripcion" name="inputDescripcion" placeholder="DESCRIPCION" type="textarea" rows="4" cols="50" >
+                            <textarea id="inputDescripcion" name="inputDescripcion" placeholder="DESCRIPCION" rows="3" cols="30" type="textarea"></textarea>
                             <p id="obligatorioDescripcion" class="obligatorio fs-6">Max 255 caracteres</p>
                         </div>
                         <div class="m-2">
