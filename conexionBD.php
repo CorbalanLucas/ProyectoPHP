@@ -1,5 +1,4 @@
 <?php
-
 //armar la conexion
 $conn = new mysqli("localhost", "root", "", "juegos");   //conexion con ese usuario contraseña y nombre de base
 if($conn->connect_errno){
@@ -28,3 +27,4 @@ if($conn->connect_errno){
 //insertamos de la tabla plataformas, los valores ejemplo1
 
 //echo "Id creado" . mysqli_insert_id($link); //imprimimos el id que nos dio al insertar un dato nuevo
+?>

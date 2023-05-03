@@ -20,11 +20,17 @@
                 $valido = false;
             }
             else {
-                $nombre = $_POST['inputNombre'];
-                $imagen = base64_encode(file_get_contents($_FILES['inputImagen']['tmp_name']));
-                $type = $_FILES['inputImagen']['type'];
-                $plataforma = $_POST['inputPlataforma'];
-                $genero = $_POST['inputGenero'];
+                $extension = pathinfo($_FILES['inputImagen']['name'], PATHINFO_EXTENSION);
+                if(($_FILES['inputImagen']['size']<40000) && (($extension=='jpg') || ($extension=='jpeg') || ($extension=='png'))){
+                    $nombre = $_POST['inputNombre'];
+                    $imagen = base64_encode(file_get_contents($_FILES['inputImagen']['tmp_name']));
+                    $type = $_FILES['inputImagen']['type'];
+                    $plataforma = $_POST['inputPlataforma'];
+                    $genero = $_POST['inputGenero'];
+                }
+                else{
+                    $valido=false;
+                }
             }
         }
     }

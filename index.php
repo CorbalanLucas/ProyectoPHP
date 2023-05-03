@@ -169,7 +169,7 @@
                     $numeroSql = mysqli_num_rows($resultado);                    
                 ?>
 
-                <p> <i class="mdi mdi-file-document"></i> <?php echo $numeroSql; ?> Resultados Encontrados</p>
+                <p style="color:white"> <i class="mdi mdi-file-document"></i> <?php echo $numeroSql; ?> Resultados Encontrados</p>
                 
                 <div class="table-responsive">
                     <div class="row">                
@@ -181,15 +181,8 @@
                                 <div class="card m-1">                                
                                     <!--Imagen -->    
                                     <?php
-
-                                        $base64 = 'data:/'.$row['tipo_imagen'].';base64,'.($row['imagen']);
-                                        
-                                        
-                                        echo '<img class="card-img-top" src="'.$base64.'"/>';
-
-                                        //var_dump($base64);
-                                        //echo '<img src="data:image/'.$row[3].';base64,"'.base64_decode($row[2]).' alt="" />';
-                                        //echo '<img src="data:image/'.$row['tipo_imagen'].';base64,'.base64_encode('imagen').'"/>';                                        
+                                        $base64 = 'data:/'.$row['tipo_imagen'].';base64,'.($row['imagen']);                 
+                                        echo '<img class="card-img-top" src="'.$base64.'"/>';                                       
                                     ?>
                                     
                                     <div class="card-body">
