@@ -1,6 +1,24 @@
-let cerrar = document.getElementById("cerrar");
-let modal = document.getElementById("miModal");
-let botonCerrar = document.getElementById("botonCerrar");
+document.addEventListener('DOMContentLoaded', function() {
+    let cerrar = document.getElementById("cerrar")||null;
+    let modal = document.getElementById("miModal")||null;
+    let botonCerrar = document.getElementById("botonCerrar")||null;
+    if(modal!=null){
+        cerrar.onclick = function() {
+            modal.style.display = "none";
+            document.body.classList.remove("modalAbierto");
+        }
+        botonCerrar.onclick = function() {
+            modal.style.display = "none";
+            document.body.classList.remove("modalAbierto");
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.classList.remove("modalAbierto");
+            }
+        }
+    }
+});
 function validarFiltro(){
     let nombre=document.getElementById("inputNombreFiltro");
     let plataforma=document.getElementById("inputPlataformaFiltro");
@@ -18,19 +36,5 @@ function validarFiltro(){
         plataforma.style.borderColor="#dee2e6";
         genero.style.borderColor="#dee2e6";
         ordenar.style.borderColor="#dee2e6";
-    }
-}
-cerrar.onclick = function() {
-    modal.style.display = "none";
-    document.body.classList.remove("modalAbierto");
-}
-botonCerrar.onclick = function() {
-    modal.style.display = "none";
-    document.body.classList.remove("modalAbierto");
-}
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        document.body.classList.remove("modalAbierto");
     }
 }

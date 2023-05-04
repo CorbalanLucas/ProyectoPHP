@@ -11,7 +11,7 @@ function validar(){
 
     let nombre=document.getElementById("inputNombre").value;
     let descripcion=document.getElementById("inputDescripcion").value;
-    let imagen=document.getElementById("inputImagen").files[0];
+    let imagen=document.getElementById("inputImagen");
     let plataforma=document.getElementById("inputPlataforma").value;
     let url=document.getElementById("inputUrl").value;
     let genero=document.getElementById("inputGenero").value;
@@ -31,10 +31,11 @@ function validar(){
             document.getElementById('obligatorioDescripcion').style.display='none';
         }
 
-        if (!imagen){
+        if (imagen.files.length !== 1){
             document.getElementById('obligatorioImg').style.display='inline';
             valido=false;
         }else{
+            imagen = imagen.files[0];
             let extension = imagen.name.split('.').pop();
             if(((extension!=='png') && (extension!=='jpeg') && (extension!=='jpg')) || (imagen.size>40000)){
                 document.getElementById('obligatorioImg').style.display='inline';
@@ -67,19 +68,9 @@ function validar(){
 
         return valido;
         
-        event.preventDefault();
 }
 
-
 function resetCampos(){
-
-    let nombre=document.getElementById("inputNombre").value;
-    let descripcion=document.getElementById("inputDescripcion").value;
-    let imagen=document.getElementById("inputImagen").value;
-    let plataforma=document.getElementById("inputPlataforma").value;
-    let url=document.getElementById("inputUrl").value;
-    let genero=document.getElementById("inputGenero").value;
-
     /*OCULTO ERROR*/
     document.getElementById('obligatorioURL').style.display='none';  
     document.getElementById('obligatorioGenero').style.display='none';
@@ -87,8 +78,4 @@ function resetCampos(){
     document.getElementById('obligatorioDescripcion').style.display='none';
     document.getElementById('obligatorioImg').style.display='none';
     document.getElementById('obligatorioPlataforma').style.display='none';
-
-    //location.reload( forceGet );    
-
-
 }
