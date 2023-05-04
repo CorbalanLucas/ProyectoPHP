@@ -37,7 +37,7 @@
 
     if($valido==true){
         include 'conexionBD.php';
-        $sql = "INSERT INTO juegos (nombre, imagen, tipo_imagen, descripcion, id_genero, id_plataforma) VALUES ('$nombre', '$imagen', '$type', '$descripcion', '$genero', '$plataforma');";
+        $sql = "INSERT INTO juegos (nombre, imagen, tipo_imagen, descripcion, id_genero, id_plataforma, url) VALUES ('$nombre', '$imagen', '$type', '$descripcion', '$genero', '$plataforma', '$url');";
         if ($conn->query($sql) === TRUE) {
             session_start();
             $_SESSION['nombre'] = $nombre;
