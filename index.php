@@ -142,7 +142,7 @@
                     $numeroSql = mysqli_num_rows($resultado);                    
                 ?>
                 <p style="color:white"> <?php echo $numeroSql; ?> Resultados Encontrados</p>
-                <div class="table-responsive">
+                <div style="overflow-x:hidden;" class="table-responsive">
                     <div class="row">                
                         <?php                   
                         if ($resultado){
