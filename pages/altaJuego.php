@@ -99,14 +99,10 @@
                                     </option>
         
                                     <option value=5>
-                                        Disparos
+                                        Aventura
                                     </option>
                                 </select>
                             <p id="obligatorioGenero" class="obligatorio">*</p>
-                        </div>
-
-                        <div>
-                            <p id="mensajeError">TODOS LOS CAMPOS SON OBLIGATORIOS</p>
                         </div>
                         <div>
                             <a class="boton" id="enviarForm" href="js/validacion.js"> Enviar </a>
