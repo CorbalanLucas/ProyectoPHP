@@ -6,12 +6,8 @@ main {
 
     text-align: center;
     background-color: #0F4C75;
-    /*padding-bottom: 3em;*/
 }
 body {
-    background-color: #f5fac1;
-    /*padding-bottom: 3em;
-    position: relative;*/
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
@@ -21,19 +17,12 @@ footer {
     background-color: #1B262C;
     text-align: center;
     color: #ffffff;
-    /*position: absolute;
-    bottom: 0;
-    width: 100%;*/
 }
 
 #contenedorForm{
     color: #e3e3e3;
     padding: 20px;
     border: 2px;
-}
-
-.backgroundElementos {
-    background-color: #d8f8ff;
 }
 
 .boton {
@@ -53,24 +42,15 @@ p{
     font-size: larger;
 }
 
-fieldset{
-    border-color: #000000;
-    
-}
-
 .logo{
     width: 150px;   
-}
-
-#mensajeError{
-    display: none;
-    color: red;
 }
 
 .obligatorio{
     color: red;
     display: none;
 }
+
 .modalPersonalizado {
     display: block;
     position: fixed;
@@ -82,7 +62,7 @@ fieldset{
     overflow: hidden; /* no permitir scroll */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4);
-  }
+}
   
 .contenidoModal {
     background-color: #eeeeee;
